@@ -10,8 +10,6 @@ A set of tools for collating and transferring data sets.
 
 2. Send and receive files/directories.
 
-
-
 ## Features
 
 1. Multithreaded compression and decompression with pigz.
@@ -19,8 +17,6 @@ A set of tools for collating and transferring data sets.
 2. Partitioning and merging of large datasets.
 
 3. Send and receive files and check md5.
-
-
 
 ## Usage
 
@@ -34,8 +30,6 @@ python utils/archive.py --src imagenet --dst . --split 2G
 
 *Notice: If the dataset is larger than 2G, it will be divided into small files.*
 
-
-
 **Decompress a single dataset**
 
 ```bash
@@ -43,8 +37,6 @@ python utils/archive.py --src imagenet.tar.gz --dst . --decompress
 ```
 
 *Notice: If the source is a directory, it will be merged firstly.*
-
-
 
 **Compress batch dataset directories**
 
@@ -54,8 +46,6 @@ python utils/archive.py --root datasets/ --dst tars/ --split 2G
 
 *Notice: If the dataset is larger than 2G, it will be divided into small files.*
 
-
-
 **Decompress batch datasets**
 
 ```bash
@@ -63,8 +53,6 @@ python util/archive.py --root tars/ --dst datasets/ --decompress
 ```
 
 *Notice: If the dataset is larger than 2G, it will be divided into small files.*
-
-
 
 ### Send & Receive
 
@@ -76,8 +64,6 @@ python utils/remote.py --host 1.2.3.4 --port 1234 \
   --src file.txt --dst /dst/dir/
 ```
 
-
-
 **Send a directory**
 
 ```bash
@@ -85,8 +71,6 @@ python utils/remote.py --host 1.2.3.4 --port 1234 \
   --username user --password pass \
   --src src/dir/ --dst /dst/dir/
 ```
-
-
 
 **Receive a single file**
 
@@ -96,19 +80,13 @@ python utils/remote.py --host 1.2.3.4 --port 1234 \
   --src /src/dir/file.txt --dst . --receive
 ```
 
-
-
 **Receive a directory**
 
-```python
 ```bash
 python utils/remote.py --host 1.2.3.4 --port 1234 \
   --username user --password pass \
   --src /src/dir --dst . --receive
 ```
-```
-
-
 
 **Send/Recevice with config**
 
