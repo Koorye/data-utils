@@ -30,9 +30,14 @@ def get_filename(path):
 
 
 def get_parent_dir(path):
+    path = path.replace('\\', '/')
     if path.endswith('/'):
         path = path[:-1]
-    return '/'.join(path.replace('\\', '/').split('/')[:-1])
+        
+    if '/' not in path:
+        return '.'
+
+    return '/'.join(path.split('/')[:-1])
 
 
 def if_exists(path):
@@ -102,8 +107,8 @@ class Compressor(object):
         if not if_exists(dst):
             print(f"Output directory {dst} does not exist, creating it.")
             os.makedirs(dst)
-        
-        print(f"Compressing {src} to {dst}...")
+
+        print(f"Compressing {src} to {dst} ...")
 
         # change directory to src
         parent = get_parent_dir(src)

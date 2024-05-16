@@ -133,6 +133,8 @@ class Client(object):
             print(f'{self.filename} md5sum not match. Resending...')
             self.sftp.get(remote_path, local_path, callback=self._progress)
             local_md5 = self._md5sum(local_path)
+        
+        print(f'{self.filename} received successfully.')
 
     def _progress(self, sent, size):
         """ print progress bar """
