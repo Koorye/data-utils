@@ -1,8 +1,6 @@
 # Data Utils
 
-A set of tools for collating and transferring data sets.
-
-
+A set of tools for collating and transferring datasets.
 
 ## Functions
 
@@ -104,5 +102,3 @@ config.json should be like:
     "password": "pass"
 }
 ```
-
-
