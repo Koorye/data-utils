@@ -16,6 +16,12 @@ A set of tools for collating and transferring datasets.
 
 3. Send and receive files and check md5.
 
+## ## Installation
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Usage
 
 ### Compress & Decompress
